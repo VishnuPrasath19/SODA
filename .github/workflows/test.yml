@@ -18,7 +18,7 @@ jobs:
           configuration: ./configuration.yaml
           checks: ./checks.yaml
         env:
-          SODA_CLOUD_API_KEY: ${{ secrets.83734b5-716a-4128-9640-923b72e1cb3f }}
-          SODA_CLOUD_API_SECRET: ${{ secrets.55aPWDgQni5PrzyPIUFi8rYtPUQnC4ibz0niYgFvCxqyTCjWF8YWAQT }}
-          SNOWFLAKE_USERNAME: ${{ secrets.VISHNUPRASATH19 }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.Vishnu@19 }}
+          SODA_CLOUD_API_KEY: 83734b5-716a-4128-9640-923b72e1cb3f
+          SODA_CLOUD_API_SECRET: 55aPWDgQni5PrzyPIUFi8rYtPUQnC4ibz0niYgFvCxqyTCjWF8YWAQT
+          SNOWFLAKE_USERNAME: VISHNUPRASATH19
+          SNOWFLAKE_PASSWORD: Vishnu@19
