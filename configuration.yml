@@ -1,23 +1,15 @@
-name: Scan for data quality
-
-on: pull_request
-jobs:
-  soda_scan:
-    runs-on: windows-latest
-    name: Run Soda Scan
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Perform Soda Scan
-        uses: sodadata/soda-github-action@v1
-        env:
-          SODA_CLOUD_API_KEY: ${{ secrets.d83734b5-716a-4128-9640-923b72e1cb3f }}
-          SODA_CLOUD_API_SECRET: ${{ secrets.55aPWDgQni5PrzyPIUFi8rYtPUQnC4ibz0niYgFvCxqyTCjWF8YWAQT }}
-          SNOWFLAKE_USERNAME: ${{ secrets.VISHNUPRASATH19 }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.Vishnu@19 }}
-        with:
-          soda_library_version: v1.0.4
-          data_source: snowflake
-          configuration: ./configuration.yaml
-          checks: ./checks.yaml
+data_source dbsource:  
+    type: snowflake
+    account: qy50257.central-india.azure
+    username: VISHNUPRASATH19
+    password: Vishnu@19
+    role: accountadmin
+    database: SNOWFLAKE_SAMPLE_DATA
+    warehouse: compute_wh
+    schema: TPCH_SF1
+    threads: 10
+    client_session_keep_alive: False
+soda_cloud:
+  host: cloud.us.soda.io
+  api_key_id: d83734b5-716a-4128-9640-923b72e1cb3f
+  api_key_secret: 55aPWDgQni5PrzyPIUFi8rYtPUQnC4ibz0niYgFvCxqyTCjWF8YWAQT    
