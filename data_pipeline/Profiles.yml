@@ -1,0 +1,15 @@
+data_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: qy50257.central-india.azure
+      user: VISHNUPRASATH19
+      password: Vishnu@19
+      role: dbt_role1
+      database: dbt_db1
+      warehouse: dbt_wh1
+      schema: dbt_schema1
+      threads: 10
+      client_session_keep_alive: False
+ 
